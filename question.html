@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head><title>Question</title></head>
+<body>
+    <h1>Question</h1>
+    <p>{{ question }}</p>
+    <form action="{{ url_for('score') }}" method="POST">
+        <input type="hidden" name="id" value="{{ question_id }}">
+        <label for="guess">Your confidence (0 to 1):</label>
+        <input type="range" id="guess" name="guess" min="0" max="1" step="0.01">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

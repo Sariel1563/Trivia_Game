@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<head><title>Score</title></head>
+<body>
+    <h1>Results</h1>
+    <p>Your log loss: {{ log_loss }}</p>
+    <p>Average log loss for this question: {{ average_log_loss }}</p>
+    <p>Correct answer was: {{ 'Correct' if correct_answer == 1 else 'Incorrect' }}</p>
+    <a href="{{ url_for('next_question') }}">Next Question</a>
+</body>
+</html>
